@@ -1,5 +1,3 @@
-// src/pages/Experience.tsx
-
 type ExperienceItem = {
   role: string;
   company: string;

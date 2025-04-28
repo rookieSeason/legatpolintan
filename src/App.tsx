@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Project from "./pages/Project";
 import Experience from "./pages/Experience";
+import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
@@ -24,6 +25,7 @@ function Layout() {
     "/skills",
     "/projects",
     "/experience",
+    "/contact",
   ].includes(location.pathname);
 
   return (
@@ -35,6 +37,7 @@ function Layout() {
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Project />} />
         <Route path="/experience" element={<Experience />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
       </Routes>
       {!is404 && <Footer />}
