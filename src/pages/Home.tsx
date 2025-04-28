@@ -14,6 +14,16 @@ const description = `I’m Lester, a former web developer turned QA enthusiast. 
             manual and automation testing. I also explore UI/UX and graphic
             design, blending creativity with precision. Let’s connect!`;
 const Home: React.FC = () => {
+  const handleDownload = () => {
+    // Path to your resume PDF file
+    const resumeUrl = "../assets/LEG-Resume.pdf";
+
+    // Create an anchor element to trigger the download
+    const a = document.createElement("a");
+    a.href = resumeUrl;
+    a.download = "LEG-Resume.pdf"; // Name of the downloaded file
+    a.click(); // Trigger the download
+  };
   return (
     <section className="flex flex-col bg-white dark:bg-[#18181b] min-h-screen justify-center items-center w-screen scroll-smooth p-4">
       <div className="w-full max-w-screen-lg grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-20">
@@ -37,7 +47,10 @@ const Home: React.FC = () => {
                 </span>
               ))}
             </div>
-            <button className="px-3 py-2 bg-teal-600 text-slate-100 rounded-full hover:bg-teal-700">
+            <button
+              className="px-3 py-2 bg-teal-600 text-slate-100 rounded-full hover:bg-teal-700"
+              onClick={handleDownload}
+            >
               Download CV
             </button>
           </div>
