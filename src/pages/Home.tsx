@@ -16,7 +16,7 @@ const description = `I’m Lester, a former web developer turned QA enthusiast. 
 const Home: React.FC = () => {
   const handleDownload = () => {
     // Path to your resume PDF file
-    const resumeUrl = "../assets/LEG-Resume.pdf";
+    const resumeUrl = "../../public/LEG-Resume.pdf";
 
     // Create an anchor element to trigger the download
     const a = document.createElement("a");
