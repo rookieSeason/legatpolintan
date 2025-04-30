@@ -29,7 +29,7 @@ const Home: React.FC = () => {
     <section className="flex flex-col bg-white dark:bg-[#18181b] min-h-screen justify-center items-center w-screen scroll-smooth p-4">
       <div className="w-full max-w-screen-lg grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-20">
         {/* Text Section */}
-        <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left">
+        <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left order-2 md:order-1">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-teal-600 dark:text-teal-500">
             Aspiring QA Engineer
           </h1>
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
           </div>
         </div>
         {/* Avatar Section */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center order-1 md:order-2">
           <img
             src={avatar}
             alt="Avatar"

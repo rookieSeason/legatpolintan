@@ -1,6 +1,7 @@
 import bacoorLogo from "../assets/bacoor-logo.png";
 import { FaLink } from "react-icons/fa6";
 import { DiLaravel } from "react-icons/di";
+import { SiSelenium } from "react-icons/si";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
@@ -19,6 +20,13 @@ const Projects = () => {
         "This project is a simple web-based application to manage a list of students. It allows users to add, view, edit, and delete student records through basic operations. ",
       link: "https://github.com/rookieSeason/laravel_practice.git",
     },
+    {
+      title: "Login Automation Test using Selenium JavaScript",
+      icon: <SiSelenium className="text-4xl text-green-500 rounded-full" />,
+      description:
+        "A login test automation using Selenium to login a valid credentials and to check if it login successfully and redirected to the next page or not",
+      link: "https://github.com/rookieSeason/login-automation-selenium.git",
+    },
   ];
 
   return (
@@ -35,7 +43,7 @@ const Projects = () => {
             contribute if you have ideas for how it can be improved.
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           {projects.map((project, index) => (
             <Link
               to={project.link}
