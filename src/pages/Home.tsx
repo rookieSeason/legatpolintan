@@ -1,12 +1,23 @@
 import avatar from "../assets/avatar.jpg";
 import { FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
 
 const socialIcons = [
-  { icon: <FaLinkedin />, key: "linkedin" },
-  { icon: <FaGithub />, key: "github" },
-  { icon: <BsTwitterX />, key: "twitter" },
-  { icon: <FaFacebook />, key: "facebook" },
+  {
+    icon: <FaLinkedin />,
+    key: "linkedin",
+    url: "https://www.linkedin.com/in/lester-john-gatpolintan-119112272/",
+  },
+  {
+    icon: <FaGithub />,
+    key: "github",
+    url: "https://github.com/rookieSeason",
+  },
+
+  {
+    icon: <FaFacebook />,
+    key: "facebook",
+    url: "https://www.facebook.com/Liquid.L",
+  },
 ];
 
 const description = `I’m Lester, a former web developer turned QA enthusiast. With a keen
@@ -39,15 +50,19 @@ const Home: React.FC = () => {
           {/* Social Icons & Button */}
           <div className="flex justify-center md:justify-start items-center mt-2 gap-4">
             <div className="flex text-xl gap-4">
-              {socialIcons.map(({ icon, key }) => (
-                <span
+              {socialIcons.map(({ icon, key, url }) => (
+                <a
                   key={key}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-500 dark:text-gray-400 hover:text-teal-600"
                 >
                   {icon}
-                </span>
+                </a>
               ))}
             </div>
+
             <button
               className="px-3 py-2 bg-teal-600 text-slate-100 rounded-full hover:bg-teal-700"
               onClick={handleDownload}
