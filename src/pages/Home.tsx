@@ -21,8 +21,8 @@ const socialIcons = [
 ];
 
 const description = `I’m Lester, a former web developer turned QA enthusiast. With a keen
-            eye for bugs and a passion for software quality, I specialize in
-            manual and automation testing. I also explore UI/UX and graphic
+            eye for bugs and a passion for software quality, I explore
+            manual and automation testing, UI/UX and graphic
             design, blending creativity with precision. Let’s connect!`;
 const Home: React.FC = () => {
   const handleDownload = () => {
