@@ -28,7 +28,7 @@ const Home: React.FC = () => {
   const handleDownload = () => {
     // Path to your resume PDF file
     console.log("download clicked");
-    const resumeUrl = "/LEG-Resume.pdf";
+    const resumeUrl = "/legatpolintan-resume.pdf";
 
     // Create an anchor element to trigger the download
     const a = document.createElement("a");

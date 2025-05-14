@@ -7,11 +7,16 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   const projects = [
     {
-      title: "Online Relocation Management System",
-      image: bacoorLogo,
+      title: "Login Test Automation using Selenium JavaScript",
+      icon: <SiSelenium className="text-4xl text-green-500 rounded-full" />,
       description:
-        "A capstone project for informal settler families that needs to relocate and must submit necessary requirements to move forward.",
-      link: "https://github.com/rookieSeason/Online-Relocation-MIS.git",
+        "A login test automation using Selenium to login a valid credentials and to check if it login successfully and redirected to the next page or not",
+      link: "https://github.com/rookieSeason/login-automation-selenium.git",
+      tech: [
+        "Selenium WebDriver",
+        "Miscrosoft Edge Driver",
+        "Test Cases Design",
+      ],
     },
     {
       title: "Students System Laravel",
@@ -19,13 +24,15 @@ const Projects = () => {
       description:
         "This project is a simple web-based application to manage a list of students. It allows users to add, view, edit, and delete student records through basic operations. ",
       link: "https://github.com/rookieSeason/laravel_practice.git",
+      tech: ["Laravel", "MySQL", "Tailwind CSS", "Alpine JS"],
     },
     {
-      title: "Login Automation Test using Selenium JavaScript",
-      icon: <SiSelenium className="text-4xl text-green-500 rounded-full" />,
+      title: "Online Relocation Management System",
+      image: bacoorLogo,
       description:
-        "A login test automation using Selenium to login a valid credentials and to check if it login successfully and redirected to the next page or not",
-      link: "https://github.com/rookieSeason/login-automation-selenium.git",
+        "A capstone project for informal settler families that needs to relocate and must submit necessary requirements to move forward.",
+      link: "https://github.com/rookieSeason/Online-Relocation-MIS.git",
+      tech: ["PHP", "MySQL", "Bootstrap", "ApexChart"],
     },
   ];
 
@@ -67,6 +74,18 @@ const Projects = () => {
               <p className="text-gray-500 text-md dark:text-gray-400 pt-4 max-w-md px-2">
                 {project.description}
               </p>
+              {project.tech && (
+                <div className="flex flex-wrap gap-2 mt-4 px-2">
+                  {project.tech.map((item, i) => (
+                    <span
+                      key={i}
+                      className="bg-gray-100 dark:bg-zinc-700 text-gray-800 dark:text-gray-300 text-xs font-medium px-3 py-1 rounded-full"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              )}
               <div className="pt-4">
                 {" "}
                 <p className="text-sm font-bold px-2">
