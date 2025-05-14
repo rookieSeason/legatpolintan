@@ -72,7 +72,7 @@ const ContactPage: React.FC = () => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-900"
             />
           </div>
 
@@ -90,7 +90,7 @@ const ContactPage: React.FC = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-900"
             />
           </div>
 
@@ -108,7 +108,7 @@ const ContactPage: React.FC = () => {
               onChange={handleChange}
               required
               rows={4}
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-500 rounded-lg shadow-sm focus:outline-none focus:ring-teal-500 focus:border-teal-500 sm:text-sm text-gray-600 dark:text-gray-300 bg-white dark:bg-zinc-900"
             />
           </div>
 
