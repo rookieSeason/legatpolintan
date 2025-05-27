@@ -1,12 +1,13 @@
 import { useState } from "react";
+import { FaReact, FaNodeJs, FaBootstrap, FaGitAlt } from "react-icons/fa";
 import {
-  FaReact,
-  FaNodeJs,
-  FaBootstrap,
-  FaGitAlt,
-  FaDatabase,
-} from "react-icons/fa";
-import { SiTailwindcss, SiSelenium, SiPostman, SiJira } from "react-icons/si";
+  SiTailwindcss,
+  SiSelenium,
+  SiPostman,
+  SiJira,
+  SiCypress,
+  SiAppium,
+} from "react-icons/si";
 import { TbBrandTypescript } from "react-icons/tb";
 import { RiJavascriptLine } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
@@ -29,8 +30,9 @@ const tabs = [
     label: "QA Automation",
     content: [
       { icon: <SiSelenium />, label: "Selenium" },
+      { icon: <SiCypress />, label: "Cypress" },
+      { icon: <SiAppium />, label: "Appium" },
       { icon: <SiPostman />, label: "Postman" },
-      { icon: <FaDatabase />, label: "SQL" },
     ],
   },
   {

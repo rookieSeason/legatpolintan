@@ -1,13 +1,21 @@
 import bacoorLogo from "../assets/bacoor-logo.png";
 import { FaLink } from "react-icons/fa6";
 import { DiLaravel } from "react-icons/di";
-import { SiSelenium } from "react-icons/si";
+import { SiSelenium, SiCypress } from "react-icons/si";
 import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
     {
-      title: "Login Test Automation using Selenium JavaScript",
+      title: "Cypress Login Testing",
+      icon: <SiCypress className="text-4xl text-gray-600 dark:text-gray-300" />,
+      description:
+        "This project automates the testing of the login functionality using Cypress. It verifies user authentication, checks error handling for invalid inputs, and ensures the correct flow for successful login attempts.",
+      link: "https://github.com/rookieSeason/login-automation-cypress.git",
+      tech: ["Cypress"],
+    },
+    {
+      title: "Selenium Login Testing",
       icon: <SiSelenium className="text-4xl text-green-500 rounded-full" />,
       description:
         "A login test automation using Selenium to login a valid credentials and to check if it login successfully and redirected to the next page or not",
@@ -20,7 +28,7 @@ const Projects = () => {
     },
     {
       title: "Students System Laravel",
-      icon: <DiLaravel className="text-4xl text-red-700" />,
+      icon: <DiLaravel className="text-4xl text-center text-red-700" />,
       description:
         "This project is a simple web-based application to manage a list of students. It allows users to add, view, edit, and delete student records through basic operations. ",
       link: "https://github.com/rookieSeason/laravel_practice.git",
