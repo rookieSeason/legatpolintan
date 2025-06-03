@@ -13,6 +13,8 @@ import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Navbar from "./component/Navbar";
 import Footer from "./component/Footer";
+import { useEffect, useState, CSSProperties } from "react";
+import { HashLoader } from "react-spinners";
 
 function Layout() {
   const location = useLocation();
@@ -44,12 +46,50 @@ function Layout() {
     </>
   );
 }
+const override: CSSProperties = {
+  display: "block",
+  margin: "0 auto",
+  borderColor: "red",
+};
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Detect dark mode preference
+    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setIsDark(darkQuery);
+
+    // Simulate loading delay
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Router>
-      <Layout />
-    </Router>
+    <>
+      {loading && (
+        <div
+          className={`fixed inset-0 flex justify-center items-center z-50 ${
+            isDark ? "bg-[#18181b]" : "bg-white"
+          }`}
+        >
+          <HashLoader
+            color="#36d7b7"
+            size={70}
+            loading={loading}
+            cssOverride={override}
+          />
+        </div>
+      )}
+      {!loading && (
+        <Router>
+          <Layout />
+        </Router>
+      )}
+    </>
   );
 }
 
